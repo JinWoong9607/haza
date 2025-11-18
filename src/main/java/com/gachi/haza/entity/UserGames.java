@@ -28,8 +28,8 @@ public class UserGames {
     @ColumnDefault("0")
     private boolean isBookmarked;
 
-    @Column(name="is_prefered", nullable = false)
+    @Column(name="is_preferred", nullable = false)
     @ColumnDefault("0")
-    private boolean isPrefered;
+    private boolean isPreferred;
 
 }
