@@ -25,11 +25,9 @@ public class UserGames {
     private Games gameId;
 
     @Column(name="is_bookmarked",nullable = false)
-    @ColumnDefault("0")
-    private boolean isBookmarked;
+    private boolean isBookmarked = false;
 
     @Column(name="is_preferred", nullable = false)
-    @ColumnDefault("0")
-    private boolean isPreferred;
+    private boolean isPreferred = false;
 
 }

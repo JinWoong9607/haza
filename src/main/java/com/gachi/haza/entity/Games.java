@@ -20,8 +20,7 @@ public class Games {
     private String gameName;
 
     @Column(name="imgurl",nullable = false)
-    @ColumnDefault("img/default.png")
-    private String imgurl;
+    private String imgurl = "img/default.png";
 
     @Column(name="game_about")
     private String gameAbout;

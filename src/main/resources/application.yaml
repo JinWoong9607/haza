@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create   # update, validate, create-drop 등 필요에 맞게
+      ddl-auto: update   # update, validate, create-drop 등 필요에 맞게
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
