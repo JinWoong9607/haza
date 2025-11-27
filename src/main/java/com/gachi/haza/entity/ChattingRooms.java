@@ -15,7 +15,7 @@ public class ChattingRooms {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "titles")
     private String title;
 
     @Column(name = "max_participants")

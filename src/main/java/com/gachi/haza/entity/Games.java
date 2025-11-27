@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 @Entity
-@Table(name="game")
+@Table(name="games")
 @NoArgsConstructor(access= AccessLevel.PROTECTED)
 @Getter
 public class Games {

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table
+@Table(name = "notifications")
 @Getter
 public class Notification {
 

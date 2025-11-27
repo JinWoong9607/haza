@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="genre_prefer")
+@Table(name="genre_prefers")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 public class GenrePrefers {

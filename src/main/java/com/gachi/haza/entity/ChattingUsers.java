@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "chatting_user")
+@Table(name = "chatting_users")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ChattingUsers {

@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="game_genre")
+@Table(name="game_genres")
 @Getter
 @NoArgsConstructor(access= AccessLevel.PROTECTED)
 public class GameGenres {
