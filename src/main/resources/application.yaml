@@ -4,6 +4,23 @@ spring:
     username: haza_user
     password: 1234
     driver-class-name: org.postgresql.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - openid
+              - profile
+              - email
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}" #백엔드 콜백 주소로 돌아옴. 현재는 설정하지 않음.
+            client-name: Google
+            provider:
+              google:
+                issuer-uri: https://accounts.google.com
+
 
   jpa:
     hibernate:
