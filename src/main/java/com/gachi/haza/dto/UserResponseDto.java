@@ -24,17 +24,17 @@ public class UserResponseDto {
     private String email;
 
     public static UserResponseDto from(Users user) {
-        return new UserResponseDto(
-                user.getId(),
-                user.getProvider(),
-                user.getProviderId(),
-                user.getUserName(),
-                user.getImageUrl(),
-                user.getUserAbout(),
-                user.getPlayTime(),
-                user.getPassword(),
-                user.getUserStatus(),
-                user.getEmail()
-        );
+        return UserResponseDto.builder()
+                .id(user.getId())
+                .provider(user.getProvider())
+                .providerId(user.getProviderId())
+                .userName(user.getUserName())
+                .imageUrl(user.getImageUrl())
+                .userAbout(user.getUserAbout())
+                .playTime(user.getPlayTime())
+                .password(user.getPassword())
+                .userStatus(user.getUserStatus())
+                .email(user.getEmail())
+                .build();
     }
 }

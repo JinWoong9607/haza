@@ -18,6 +18,7 @@ public class UserProfileResponseDto {
 
     public static UserProfileResponseDto from(Users user) {
         return UserProfileResponseDto.builder()
+                .id(user.getId())
                 .userName(user.getUserName())
                 .imageUrl(user.getImageUrl())
                 .userAbout(user.getUserAbout())
