@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 public enum Providers {
 
     GOOGLE("google", "GOOGLE", "구글"),
-    KAKAO("kakao", "KAKAO", "카카오"),
     NAVER("naver", "NAVER", "네이버");
 
     private final String registrationId;
