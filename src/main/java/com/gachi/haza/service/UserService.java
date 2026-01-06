@@ -1,8 +1,12 @@
 package com.gachi.haza.service;
 
 import com.gachi.haza.dto.SocialProfile;
+import com.gachi.haza.dto.UserProfileResponseDto;
+import com.gachi.haza.dto.UserResponseDto;
 import com.gachi.haza.entity.enums.Providers;
 import com.gachi.haza.entity.Users;
+import com.gachi.haza.global.exception.ErrorCode;
+import com.gachi.haza.global.exception.UserNotFoundException;
 import com.gachi.haza.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -99,6 +103,19 @@ public class UserService {
         if (out.length() > 20) out = out.substring(0, 20);
 
         return out;
+    }
+
+    @Transactional(readOnly = true)
+    public UserResponseDto getUserInfo(Long id){
+        Users user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(ErrorCode.USER_NOT_FOUND));
+        return UserResponseDto.from(user);
+    }
+    @Transactional(readOnly = true)
+    public UserProfileResponseDto getUserProfile(Long id){
+        Users user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(ErrorCode.USER_NOT_FOUND));
+        return UserProfileResponseDto.from(user);
     }
 
 }
